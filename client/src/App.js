@@ -1,24 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Drivers from './Pages/Drivers';
 
 function App() {
-    const [drivers, setDrivers] = useState([]);
 
-    useEffect(() => {
-        fetch('http://localhost:5000/api/drivers')
-            .then(response => response.json())
-            .then(data => setDrivers(data));
-    }, []);
-
-    return (
-        <div>
-            <h1>Formula 1 Drivers</h1>
-            <ul>
-                {drivers.map(driver => (
-                    <li key={driver.driverId}>{driver.givenName} {driver.familyName}</li>
-                ))}
-            </ul>
-        </div>
-    );
+return (
+<div className="App">
+        <Router>
+          <Routes>
+            <Route path="/api/drivers" element={<Drivers />} />
+          </Routes>
+        </Router>
+      </div>
+);
 }
-
 export default App;

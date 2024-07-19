@@ -4,15 +4,15 @@ function Drivers() {
     const [drivers, setDrivers] = useState([]);
 
     useEffect(() => {
-        fetch('/api/drivers')  // Dohvaćanje podataka s ruta definiranom u Flask aplikaciji
+        fetch('/api/drivers')
             .then(response => response.json())
             .then(data => setDrivers(data))
-            .catch(error => console.error('Error fetching drivers:', error));
+            .catch(error => console.error('Error fetching data:', error));
     }, []);
 
     return (
         <div>
-            <h2>Formula 1 Drivers</h2>
+            <h1>Formula 1 Drivers</h1>
             <ul>
                 {drivers.map(driver => (
                     <li key={driver.driverId}>{driver.givenName} {driver.familyName}</li>

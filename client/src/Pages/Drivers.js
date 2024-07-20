@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 
 function Drivers() {
     const [drivers, setDrivers] = useState([]);
+    const [currentYear] = useState(new Date().getFullYear());
 
     useEffect(() => {
         fetch('http://localhost:5000/api/drivers')
@@ -19,7 +20,7 @@ function Drivers() {
     return (
         <div>
             <Navbar />
-            <h1>Formula 1 Drivers</h1>
+            <h1>Formula 1 Drivers {currentYear} Season</h1>
             <table className='driversTable'>
                 <thead>
                     <tr>

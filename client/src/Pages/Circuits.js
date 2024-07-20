@@ -5,6 +5,7 @@ import './Circuits.css';
 
 function Circuits() {
     const [circuits, setCircuits] = useState([]);
+    const [currentYear] = useState(new Date().getFullYear());
 
     useEffect(() => {
         fetch('http://localhost:5000/api/circuits')
@@ -19,7 +20,7 @@ function Circuits() {
     return (
         <div>
             <Navbar />
-            <h1>Formula 1 Circuits</h1>
+            <h1>Formula 1 Circuits {currentYear} Season</h1>
             <table className='circuitTable'>
                 <thead>
                     <tr>

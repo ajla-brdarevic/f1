@@ -1,12 +1,14 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 import requests
+from datetime import datetime
 
 app = Flask(__name__)
 CORS(app)
 
 def get_f1_drivers():
-    url = 'http://ergast.com/api/f1/2024/drivers.json'
+    current_year = datetime.now().year
+    url = f'http://ergast.com/api/f1/{current_year}/drivers.json'
     response = requests.get(url)
 
     if response.status_code == 200:

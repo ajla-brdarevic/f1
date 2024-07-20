@@ -1,0 +1,15 @@
+.circuitTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.circuitTable th, .circuitTable td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.circuitTable th {
+    background-color: #f4f4f4;
+}

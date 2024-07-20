@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Drivers.css';
+import Navbar from './Navbar';
 
 function Drivers() {
     const [drivers, setDrivers] = useState([]);
@@ -17,6 +18,7 @@ function Drivers() {
 
     return (
         <div>
+            <Navbar />
             <h1>Formula 1 Drivers</h1>
             <table className='driversTable'>
                 <thead>

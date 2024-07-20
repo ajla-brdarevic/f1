@@ -1,3 +1,23 @@
 h1 {
     text-align: center;
 }
+
+.driversTable {
+    border-collapse: separate; 
+    border-spacing: 8px; 
+    text-align: center;
+  }
+  
+  .driversTable th, .driversTable td {
+    padding: 8px 8px;
+  }
+  
+  .driversTable a {
+    text-decoration: none; 
+    color: #007bff; 
+  }
+  
+  .driversTable a:hover {
+    text-decoration: underline;
+  }
+  

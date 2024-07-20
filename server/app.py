@@ -17,7 +17,7 @@ def get_f1_drivers():
         return drivers
     else:
         return None
-    
+
 def get_f1_circuits():
     current_year = datetime.now().year
     url = f'http://ergast.com/api/f1/{current_year}/circuits.json'
@@ -41,7 +41,7 @@ def get_drivers():
         return jsonify(drivers), 200
     else:
         return "Error fetching data from Ergast API", 500
-    
+
 @app.route('/api/circuits', methods=['GET'])
 def get_circuits():
     circuits = get_f1_circuits()

@@ -1,3 +1,4 @@
+// src/Circuits.js
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import './Circuits.css';
@@ -24,7 +25,6 @@ function Circuits() {
                     <tr>
                         <th>Name</th>
                         <th>Location</th>
-                        <th>Country</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,8 +35,7 @@ function Circuits() {
                                     {circuit.circuitName}
                                 </a>
                             </td>
-                            <td>{circuit.Location.locality}</td>
-                            <td>{circuit.Location.country}</td>
+                            <td>{circuit.Location.locality}, <i>{circuit.Location.country}</i></td>
                         </tr>
                     ))}
                 </tbody>
